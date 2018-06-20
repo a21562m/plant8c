@@ -1,0 +1,32 @@
+{
+  "pages":[
+    "pages/tools/tools",
+    "pages/index/index"
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "生活规划",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "icon/11.png",
+        "iconPath": "icon/11.png",
+        "pagePath": "pages/tools/tools",
+        "text": "种花小工具"
+      },
+      {
+        "selectedIconPath": "icon/12.png",
+        "iconPath": "icon/12.png",
+        "pagePath": "pages/index/index",
+        "text": "生活规划"
+      }
+    ]
+  }
+}

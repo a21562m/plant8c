@@ -1,0 +1,77 @@
+<!--tools.wxml-->
+<view class="container">
+  <text class="title">药物配比计算</text>
+  <view class="section">
+    <text class="title">稀释倍数</text>
+    <view class="section">
+      <input placeholder="设置稀释倍数" type="number" bindinput="setDilution" value="{{dilution}}" confirm-type="done" focus/>
+    </view>
+    <view class="section">
+      <slider bindchange="setDilution" min="0" max="10000" step="100" value="{{dilution}}" show-value/>
+    </view>
+  </view>
+  <view class="section">
+    <text class="section">用药量:{{dosage_ml}}毫升(ml)/{{dosage_drop}}滴/{{dosage_ml}}克(g)</text>
+    <view class="section">
+      <input placeholder="设置用药量(ml)" type="digit" bindinput="setDosageMl" value="{{dosage_ml}}" confirm-type="done" focus/>
+    </view>
+    <view class="section">毫升(ml/克)
+      <slider bindchange="setDosageMl" min="0" max="100" step="1" value="{{dosage_ml}}" show-value/>
+    </view>
+    <view class="section">滴(一滴0.05毫升/克)
+      <slider bindchange="setDosageDrop" min="0" max="100" step="1" value="{{dosage_drop}}" show-value/>
+    </view>
+  </view>
+  <view class="section">
+    <text class="section">用水量:{{water_ml}}毫升(ml)/{{water_l}}升(L)/{{water_container}}瓶(桶)</text>
+    <view class="section">
+      <input placeholder="设置用水量(L)" type="digit" bindinput="setWaterL" value="{{water_l}}" confirm-type="done" focus/>
+    </view>
+    <view class="section">升(L)
+      <slider bindchange="setWaterL" min="0" max="100" step="1" value="{{water_l}}" show-value/>
+    </view>
+    <view class="section">毫升(ml)
+      <slider bindchange="setWaterMl" min="0" max="10000" step="50" value="{{water_ml}}" show-value/>
+    </view>
+  </view>
+  <view class="section">
+    <text class="section">设置装水容器大小：{{container_ml}}毫升(ml)/ {{container_l}}升(L)/{{container_l}}公斤</text>
+    <view class="section">
+      <input placeholder="设置装水容器大小(ml)" type="number" bindinput="setContainerMl" value="{{container_ml}}" confirm-type="done" focus/>
+    </view>
+    <view class="section">毫升(ml)
+      <slider bindchange="setContainerMl" min="0" max="10000" step="50" value="{{container_ml}}" show-value/>
+    </view>
+    <view class="section">升(L)
+      <slider bindchange="setContainerL" min="0" max="500" step="1" value="{{container_l}}" show-value/>
+    </view>
+  </view>
+  <text class="title">土壤配比计算</text>
+  <view class="section">
+    <text class="title">土壤配比：共{{soil_total}}升：珍珠岩{{soil_zzy}}升,占{{soil_zzy1}}% /蛭石{{soil_zs}}升,占{{soil_zs1}}% /火山岩{{soil_hsy}}升,占{{soil_hsy1}}% /泥炭土{{soil_ntt}}升,占{{soil_ntt1}}% /园土{{soil_yt}}升,占{{soil_yt1}}% /赤玉土{{soil_cyt}}升,占{{soil_cyt1}}% /鹿沼土{{soil_lzt}}升,占{{soil_lzt1}}% </text>
+    <view class="section">珍珠岩(L)
+      <slider bindchange="setSoil_zzy" min="0" max="1000" step="1" value="{{soil_zzy}}" show-value/>
+    </view>
+    <view class="section">蛭石(L)
+      <slider bindchange="setSoil_zs" min="0" max="1000" step="1" value="{{soil_zs}}" show-value/>
+    </view>
+    <view class="section">火山岩(L)
+      <slider bindchange="setSoil_hsy" min="0" max="1000" step="1" value="{{soil_hsy}}" show-value/>
+    </view>
+    <view class="section">泥炭土(L)
+      <slider bindchange="setSoil_ntt" min="0" max="1000" step="1" value="{{soil_ntt}}" show-value/>
+    </view>
+    <view class="section">园土(L)
+      <slider bindchange="setSoil_yt" min="0" max="1000" step="1" value="{{soil_yt}}" show-value/>
+    </view>
+    <view class="section">赤玉土(L)
+      <slider bindchange="setSoil_cyt" min="0" max="1000" step="1" value="{{soil_cyt}}" show-value/>
+    </view>
+    <view class="section">鹿沼土(L)
+      <slider bindchange="setSoil_lzt" min="0" max="100" step="1" value="{{soil_lzt}}" show-value/>
+    </view>
+  </view>
+</view>
+
+
+

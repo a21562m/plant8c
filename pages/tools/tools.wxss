@@ -1,0 +1,12 @@
+.usermotto {
+  margin-top: 200px;
+}
+
+.section {
+  width: 93%;
+  margin: 20rpx;
+  background-color: #ccc;
+  padding: 10rpx;
+  font-size: 30rpx;
+  border-radius: 5px;
+}

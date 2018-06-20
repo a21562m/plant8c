@@ -1,0 +1,36 @@
+<!--index.wxml-->
+<view class="container">
+退休生活规划
+<!--
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+-->
+<view class="section">
+  <text class="section">退休后预计每月花费</text>
+  <view class="section">
+    <slider bindchange="setPerMonthCost" min="1000" max="20000" step="50" value="{{perMonthCost}}" show-value/>
+  </view>
+</view>
+
+<view class="section">
+  <text class="section">退休后预计还能活多少年</text>
+  <view class="section">
+    <slider bindchange="setTimeToLive" min="1" max="50" step="1" value="{{timeToLive}}" show-value/>
+  </view>
+</view>
+
+<view class="section">
+  <text class="section">通货膨胀率%</text>
+  <view class="body">
+    <slider bindchange="setCpi" min="1" max="20" step="1" block-size='28' value="{{cpi}}" show-value/>
+  </view>
+</view>
+
+<view>你需要准备退休金{{totalCost}}元</view>
+
+</view>
